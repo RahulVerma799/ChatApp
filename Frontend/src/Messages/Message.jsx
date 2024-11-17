@@ -5,7 +5,7 @@ import useConversation from '../zustand/useConversation'
 import { formatTime } from '../utils/formatTime'
 
 const Message = ({message}) => {
-  console.log(message)
+  
   const {authUser}=useAuthContext()
 
   const {selectedConversation}=useConversation()

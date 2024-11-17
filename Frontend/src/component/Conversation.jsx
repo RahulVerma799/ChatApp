@@ -5,7 +5,7 @@ import Convers from './Convers'
 
 const Conversation = () => {
   const {loading,conversations}= useGetConversation()
-  console.log(conversations)
+ 
   return (
     <div className='py-2 flex flex-col overflow-auto'>
        

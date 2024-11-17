@@ -8,13 +8,7 @@ const PORT = process.env.PORT || 4000;
 require("./config/database").connectDb();
 
 // Configure CORS
-const corsOptions = {
-    origin: "https://chatappfrontend-8b2n.onrender.com", // Frontend domain
-    methods: ["GET", "POST", "PUT", "DELETE"], // Allowed HTTP methods
-    credentials: true, // Allow credentials like cookies
-};
 
-app.use(cors(corsOptions)); // Apply CORS configuration
 
 // Add other middlewares
 app.use(express.json());

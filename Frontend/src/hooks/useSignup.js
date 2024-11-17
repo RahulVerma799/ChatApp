@@ -36,7 +36,7 @@ const useSignup = () => {
         try{
                 setLoading(true)
 
-                const response= await fetch("https://chatapp-my8l.onrender.com/api/signup",{
+                const response= await fetch("/api/signup",{
                     method:"POST",
                     headers:{"Content-Type":"application/json"},
                     body:JSON.stringify({

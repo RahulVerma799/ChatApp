@@ -3,6 +3,6 @@ const { isAuthenticate } = require("../middleware/verifyToken");
 const {getuserbysidebar}=require("../controller/userController");
 const router=express.Router();
 
-router.get("/user/user",isAuthenticate,getuserbysidebar)
+router.get("/usercon",isAuthenticate,getuserbysidebar)
 
 module.exports=router

@@ -12,7 +12,7 @@ const useSendMessage = () => {
         try{
             setLoading(true)
 
-            const response= await fetch(`https://chatapp-my8l.onrender.com/api/send/${selectedConversation._id}`,{
+            const response= await fetch(`/api/send/${selectedConversation._id}`,{
 
                 method:"POST",
                 headers:{
