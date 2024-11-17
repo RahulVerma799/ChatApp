@@ -7,10 +7,11 @@ exports.getuserbysidebar=async(req,res,next)=>{
             _id:{$ne:loggeninUser},
         }).select("-password")
 
-        res.status(400).json(alluserexpceptuser)
+        res.status(200).json(alluserexpceptuser)
     }
     catch(error){
         console.log(error)
+        res.status(400).json({ success: false, error: "in get user by id" });
         next(error)
     }
 }

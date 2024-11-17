@@ -1,14 +1,18 @@
 const { Server } = require("socket.io");
 const http = require("http");
 const express = require("express");
+const cookieParser = require("cookie-parser");
+
 
 const app=express()
+app.use(cookieParser());
+
 
 const server=http.createServer(app)
 
 const io=new Server(server,{
     cors:{
-        origin:["https://chat-app-rho-liart.vercel.app"],
+        origin:["http://localhost:5173"],
         methods:["GET","POST"]
     },
 })
