@@ -7,7 +7,7 @@ export default defineConfig({
   server:{
     proxy:{
       "/api":{
-        target:"https://chatapp-1-hbv3.onrender.com",
+        target:"https://chatapp-my8l.onrender.com",
         secure:false,
       }
     }
