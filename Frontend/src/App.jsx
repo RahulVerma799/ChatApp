@@ -5,7 +5,7 @@ import { Toaster} from 'react-hot-toast'
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import SignUp from './pages/Signup';
+import SignUp from './pages/SignUp';
 import { useAuthContext } from './context/AuthContext';
 
 
