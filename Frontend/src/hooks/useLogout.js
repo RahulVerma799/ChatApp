@@ -11,7 +11,7 @@ const useLogout = () => {
         try{
         setLoading(true)
 
-        const response=await fetch("/api/Logout",{
+        const response=await fetch("https://chatapp-my8l.onrender.com/api/Logout",{
             method:"GET",
             headers: {"Content-Type":"application/json"}
         })

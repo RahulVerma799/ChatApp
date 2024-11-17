@@ -11,7 +11,7 @@ const useGetConversation = () => {
             try{
                 setLoading(true)
 
-                const response=await fetch("/api/user/user")
+                const response=await fetch("https://chatapp-my8l.onrender.com/api/user/user")
 
                 const data=await response.json();
 

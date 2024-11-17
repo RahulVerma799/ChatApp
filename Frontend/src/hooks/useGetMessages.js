@@ -12,7 +12,7 @@ const useGetMessages = () => {
             try{
                 setLoading(true)
 
-                const res=await fetch(`/api/get/${selectedConversation?._id}`)
+                const res=await fetch(`https://chatapp-my8l.onrender.com/api/get/${selectedConversation?._id}`)
 
                 const data=await res.json()
 
