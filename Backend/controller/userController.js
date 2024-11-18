@@ -11,7 +11,7 @@ exports.getuserbysidebar=async(req,res,next)=>{
     }
     catch(error){
         console.log(error)
-        res.status(400).json({ success: false, error: "in get user by id" });
+        res.status(400).json({ success: false, error: "in get user by id" + error.message });
         next(error)
     }
 }

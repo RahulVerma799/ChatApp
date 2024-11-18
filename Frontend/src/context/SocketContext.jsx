@@ -16,12 +16,12 @@ export const SocketContextProvider = ({ children }) => {
 
     useEffect(() => {
         if (authUser) {
-            const socket = io("https://chatapp-334f.onrender.com",{
-                query:{
-                    userId:authUser._id,
-
-                }
-            })
+            const socket = io("wss://chatapp-334f.onrender.com", {
+                query: {
+                    userId: authUser._id, 
+                },
+            });
+            
             setSocket(socket);
             socket.on("getOnlineUser",(users)=>{
                 setOnlineUser(users)
