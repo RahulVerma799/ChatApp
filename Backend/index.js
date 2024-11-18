@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 4000;
 
 require("./config/database").connectDb();
 
+
 // Configure CORS
 
 
@@ -14,6 +15,11 @@ require("./config/database").connectDb();
 app.use(express.json());
 const cookieparser = require("cookie-parser");
 app.use(cookieparser());
+
+app.use(cors({
+    origin: '*', // Allow all origins temporarily
+}));
+
 
 // Test Route
 app.get("/", (req, res) => {
