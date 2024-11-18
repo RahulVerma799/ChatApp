@@ -6,13 +6,14 @@ import toast from 'react-hot-toast'
 const useGetMessages = () => {
     const [loading,setLoading]=useState(false)
     const {messages,setMessages,selectedConversation}=useConversation()
+    const BASE_URL = 'https://chatapp-334f.onrender.com';
 
     useEffect(()=>{
         const getMessages= async()=>{
             try{
                 setLoading(true)
 
-                const res=await fetch(`/api/get/${selectedConversation?._id}`)
+                const res=await fetch(`${BASE_URL}/api/get/${selectedConversation?._id}`)
 
                 const data=await res.json()
 

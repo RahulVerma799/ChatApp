@@ -3,6 +3,7 @@ import { useAuthContext } from '../context/AuthContext';
 import toast from 'react-hot-toast';
 
 const useLogout = () => {
+    const BASE_URL = 'https://chatapp-334f.onrender.com';
     
     const [loading,setLoading]=useState(false);
     const {setAuthUser}=useAuthContext();
@@ -11,7 +12,7 @@ const useLogout = () => {
         try{
         setLoading(true)
 
-        const response=await fetch("/api/Logout",{
+        const response=await fetch(`${BASE_URL}/api/Logout`,{
             method:"GET",
             headers: {"Content-Type":"application/json"}
         })

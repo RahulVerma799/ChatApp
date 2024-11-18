@@ -2,6 +2,7 @@ import { useState } from "react";
 import useConversation from "../zustand/useConversation";
 import toast from "react-hot-toast";
 
+const BASE_URL = 'https://chatapp-334f.onrender.com';
 
 const useSendMessage = () => {
     const [loading,setLoading]=useState(false);
@@ -12,7 +13,7 @@ const useSendMessage = () => {
         try{
             setLoading(true)
 
-            const response= await fetch(`/api/send/${selectedConversation._id}`,{
+            const response= await fetch(`${BASE_URL}/api/send/${selectedConversation._id}`,{
 
                 method:"POST",
                 headers:{

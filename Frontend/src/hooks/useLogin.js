@@ -1,6 +1,7 @@
 import  { useState } from 'react'
 import { useAuthContext } from '../context/AuthContext';
 import toast from 'react-hot-toast';
+const BASE_URL = 'https://chatapp-334f.onrender.com';
 
 const handleInputError=(email,password)=>{
     if(!email||!password){
@@ -26,7 +27,7 @@ const useLogin = () => {
         try{
             setLoading(true);
 
-            const response= await fetch("/api/login",{
+            const response= await fetch(`${BASE_URL}/api/login`,{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify({

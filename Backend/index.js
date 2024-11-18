@@ -10,6 +10,15 @@ require("./config/database").connectDb();
 
 // Configure CORS
 
+app.use(cors({
+    origin: [
+        'https://chatappfrontend-vdpb.onrender.com',  // Replace with your actual production URL
+      
+    ],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,  // Enable cookies if needed
+}));
+
 
 // Add other middlewares
 app.use(express.json());
