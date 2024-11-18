@@ -10,12 +10,13 @@ app.use(cookieParser());
 
 const server=http.createServer(app)
 
-const io=new Server(server,{
-    cors:{
-        origin:["https://chatappfrontend-vdpb.onrender.com"],//frontend code
-        methods:["GET","POST"]
+const io = new Server(server, {
+    cors: {
+        origin: ["https://chatappfrontend-vdpb.onrender.com"], // Replace with your frontend URL
+        methods: ["GET", "POST"],
+        credentials: true, // Allow cookies to be sent with requests
     },
-})
+});
 
  const getReceiverSocketId=(receiverId)=>{
     return userSocketMap[receiverId]
