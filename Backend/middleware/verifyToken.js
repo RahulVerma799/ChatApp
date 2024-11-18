@@ -5,6 +5,7 @@ exports.isAuthenticate=async(req,res,next)=>{
     try{
 
         const token=req.cookies.token
+        console.log(token);
 
         if(!token){
             return next(errorHandler(401,"Unauthorized: No token provided"))
@@ -16,9 +17,12 @@ exports.isAuthenticate=async(req,res,next)=>{
             }
 
             req.user=user
+            console.log(token);
 
             next()
+            console.log(token);
         })
+        console.log(token);
     }
     catch(error){
         console.error("Authentication error:", error);
