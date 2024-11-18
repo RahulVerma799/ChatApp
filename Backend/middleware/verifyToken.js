@@ -23,6 +23,9 @@ exports.isAuthenticate=async(req,res,next)=>{
             console.log(token);
         })
         console.log(token);
+        console.log("Token from cookie:", req.cookies.token);
+console.log("Decoded user:", jwt.verify(req.cookies.token, process.env.JWT_SECRET));
+
     }
     catch(error){
         console.error("Authentication error:", error);
