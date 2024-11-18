@@ -86,6 +86,11 @@ exports.login=async(req,res,next)=>{
             email:validUser.email,
             profilepic:validUser.profilepic,
         })
+        console.log("Request received at /api/login");
+        console.log("Request Headers:", req.headers);
+    
+        // Your login logic here
+        res.status(200).json({ message: "Login successful!" });
     }
     catch(error){
         next(error)
