@@ -25,9 +25,6 @@ app.use(express.json());
 const cookieparser = require("cookie-parser");
 app.use(cookieparser());
 
-app.use(cors({
-    origin: '*', // Allow all origins temporarily
-}));
 
 
 // Test Route

@@ -13,10 +13,7 @@ const useGetMessages = () => {
             try{
                 setLoading(true)
 
-                const response = await fetch(`${BASE_URL}/api/usercon`, {
-                    method: 'GET',
-                    credentials: 'include', // This ensures the cookie (JWT token) is sent with the request
-                });
+                const res=await fetch(`${BASE_URL}/api/get/${selectedConversation?._id}`)
 
                 const data=await res.json()
 
